@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +7,15 @@
 </head>
 <body>
     <h1>Deixe seu Feedback</h1>
-    <form action="{{ url_for('feedback') }}" method="post">
+    <form action="{{ url_for('isolar_dados') }}" method="post">
         <label for="nome">Nome:</label>
         <input type="text" name="nome" id="nome"><br>
-        <label for="comentario">Comentario:</label>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email"><br>
+        <label for="comentario">Comentario:</label><br>
         <textarea name="comentario" id="comentario" rows="4" cols="50"></textarea><br>
         <input type="submit" value="Enviar">
     </form>
+    <a href="{{ url_for('home') }}">Home</a>
 </body>
 </html>
